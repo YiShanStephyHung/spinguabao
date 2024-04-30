@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #ffe3ab;
+    --guabao: 70px;
+}
+
+.container {
+    --size: 58px;
+    width: 100%;
+    height: calc(100vh - var(--size));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    width: 20%;
+    height: 50%;
+}
+
+.buntop {
+    width: calc(1.5 * var(--guabao));
+    height: calc(0.5 * var(--guabao));
+    background-color: #fffffd;
+    border-radius: calc(1.1 * var(--guabao)) calc(1.1 * var(--guabao)) calc(0.3 * var(--guabao)) calc(0.3 * var(--guabao));
+}
+
+
+.coriander {
+    position: relative;
+    width: calc(1.5 * var(--guabao));
+    height: calc(0.2 * var(--guabao));
+    min-height: calc(0.2 * var(--guabao));
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 99;
+    border-radius: 1rem;
+}
+
+.coriander:before {
+    position: absolute;
+    content: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    text-decoration: #699c23 wavy underline calc(0.06 * var(--guabao));
+    top: calc(-0.15 * var(--guabao));
+    left: 0;
+    color: transparent;
+}
+
+
+.peanut {
+    margin-top: calc(-0.02 * var(--guabao));
+    background-color: transparent;
+}
+
+.peanut1,
+.peanut2 {
+    display: inline-block;
+    width: calc(0.1 * var(--guabao));
+    height: calc(0.1 * var(--guabao));
+    background: linear-gradient(to bottom right, #fbc006, #ddb11f);
+    border-radius: 50% 30% 50% 30%;
+}
+
+.meat {
+    width: calc(1.6 * var(--guabao));
+    height: calc(0.18 * var(--guabao));
+    background: linear-gradient(to right, #6e4821, #6e3611, #86521e);
+    border-radius: calc(0.1 * var(--guabao));
+}
+
+.cabbage {
+    width: calc(1.2 * var(--guabao));
+    height: calc(0.1 * var(--guabao));
+    background-color: #d3860e;
+    border-radius: calc(0.1 * var(--guabao)) calc(0.01 * var(--guabao));
+}
+
+.bunbottom {
+    width: calc(1.5 * var(--guabao));
+    height: calc(0.3 * var(--guabao));
+    background-color: #fffffd;
+    border-radius: calc(0.3 * var(--guabao)) calc(0.3 * var(--guabao)) calc(1.1 * var(--guabao)) calc(1.1 * var(--guabao));
+}
+
+
+.description {
+    position: fixed;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-65%);
+    line-height: 220%;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.description div {
+    font-size: 1.8rem;
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.hamburger:hover .description {
+    opacity: 0.6;
+
+}
+
+/* hamburger animate */
+.hamburger:hover .buntop {
+    animation: rotatebuntop 2s linear infinite;
+}
+
+.hamburger:hover .buntop:after {
+    animation: rotatebuntop 2s linear infinite;
+}
+
+.hamburger:hover .coriander {
+    transform: translateY(-1rem);
+}
+
+.hamburger:hover .coriander:before {
+    animation: rotatecor 3s linear infinite;
+}
+
+.hamburger:hover .peanut {
+    transform: translateY(-0.5rem);
+}
+
+.hamburger:hover .peanut1 {
+    animation: rotatepeanut1 2s linear infinite;
+}
+
+.hamburger:hover .peanut2 {
+    animation: rotatepeanut2 2s linear infinite;
+}
+
+.hamburger:hover .meat {
+    animation: rotatemeat 2s linear infinite;
+}
+
+.hamburger:hover .cabbage {
+    animation: rotatecab 2s linear infinite;
+}
+
+.hamburger:hover .bunbottom {
+    animation: rotatebunbottom 2s linear infinite;
+}
+
+@keyframes rotatebuntop {
+
+    0%,
+    50%,
+    100% {
+        transform: translateY(-2rem);
+    }
+
+    25% {
+        transform: translateY(-2.1rem);
+    }
+
+    75% {
+        transform: translateY(-1.9rem);
+    }
+}
+
+
+@keyframes rotatecor {
+    0% {
+        transform: translateX(-1px);
+    }
+
+    100% {
+        transform: translateX(-60px);
+    }
+}
+
+@keyframes rotatepeanut1 {
+
+    0%,
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-0.2rem);
+    }
+
+    75% {
+        transform: translateY(0.2rem);
+    }
+}
+
+@keyframes rotatepeanut2 {
+
+    0%,
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(0.2rem);
+    }
+
+    75% {
+        transform: translateY(-0.2rem);
+    }
+}
+
+
+@keyframes rotatemeat {
+
+    0%,
+    50%,
+    100% {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(3deg);
+    }
+
+    75% {
+        transform: rotateZ(-3deg);
+    }
+}
+
+@keyframes rotatecab {
+
+    0%,
+    100% {
+        transform: translateY(1rem) rotateZ(0deg);
+    }
+
+    25% {
+        transform: translateY(1rem) rotateZ(-2deg);
+    }
+
+    50% {
+        border-radius: calc(0.01 * var(--guabao)) calc(0.1 * var(--guabao));
+        transform: translateY(1rem) rotateZ(0deg);
+    }
+
+    75% {
+        transform: translateY(1rem) rotateZ(2deg);
+    }
+}
+
+@keyframes rotatebunbottom {
+
+    0%,
+    50%,
+    100% {
+        transform: translateY(2rem);
+    }
+
+    25% {
+        transform: translateY(2.1rem);
+    }
+
+    75% {
+        transform: translateY(1.9rem);
+    }
+}
+
+.hint {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.content {
+    font-size: 2rem;
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}

@@ -1,5 +1,5 @@
 # Spinning Gua Bao
-Spinning Gua Bao is a small animation created with HTML and CSS.
+Spinning Gua Bao is a small animation created with HTML and CSS. <br>
 Additionally, Gua Bao is a traditional Taiwanese pork belly bun, which is delicious. 🙂
 
 # Demo

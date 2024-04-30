@@ -15,7 +15,7 @@
     flex-direction: column;
 }
 
-.hamburger {
+.guabao {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,49 +107,49 @@
     font-style: normal;
 }
 
-.hamburger:hover .description {
+.guabao:hover .description {
     opacity: 0.6;
 
 }
 
-/* hamburger animate */
-.hamburger:hover .buntop {
+/* guabao animate */
+.guabao:hover .buntop {
     animation: rotatebuntop 2s linear infinite;
 }
 
-.hamburger:hover .buntop:after {
+.guabao:hover .buntop:after {
     animation: rotatebuntop 2s linear infinite;
 }
 
-.hamburger:hover .coriander {
+.guabao:hover .coriander {
     transform: translateY(-1rem);
 }
 
-.hamburger:hover .coriander:before {
+.guabao:hover .coriander:before {
     animation: rotatecor 3s linear infinite;
 }
 
-.hamburger:hover .peanut {
+.guabao:hover .peanut {
     transform: translateY(-0.5rem);
 }
 
-.hamburger:hover .peanut1 {
+.guabao:hover .peanut1 {
     animation: rotatepeanut1 2s linear infinite;
 }
 
-.hamburger:hover .peanut2 {
+.guabao:hover .peanut2 {
     animation: rotatepeanut2 2s linear infinite;
 }
 
-.hamburger:hover .meat {
+.guabao:hover .meat {
     animation: rotatemeat 2s linear infinite;
 }
 
-.hamburger:hover .cabbage {
+.guabao:hover .cabbage {
     animation: rotatecab 2s linear infinite;
 }
 
-.hamburger:hover .bunbottom {
+.guabao:hover .bunbottom {
     animation: rotatebunbottom 2s linear infinite;
 }
 
